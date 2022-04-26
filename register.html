@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User registration system</title>
+    </head>
+    <body>
+        <!--- login interface  -->
+        <header class="site-init">
+            <nav class="menu">
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+
+            </nav>
+
+        </header>
+    <main>
+        <h1>My Awesome user Registration System</h1>
+        <h2>Register a new user</h2>
+        <div class="form-container">
+            <!--
+                fname
+                lname
+                email (uname)
+                password (pass)
+                gender
+                age
+                phone              
+                address
+                payment method
+                color
+            -->
+            <div class="form-control">
+                <label>First Name: </label>
+                <input type="text" id="txtFirstName" placeholder="Enter your name">
+            </div>
+            <div class="form-control">
+                <label>Last Name: </label>
+                <input type="text" id="txtLastName" placeholder="Enter your name">
+            </div>
+            <div class="form-control">
+                <label>Email: </label>
+                <input type="text" id="txtEmail" placeholder="Enter your email">
+            </div>
+            <div class="form-control">
+                <label>Password: </label>
+                <input type="password" id="txtPassword" placeholder="Enter your password">
+            </div>
+            <div class="form-control">
+                <label>Gender: </label>
+                <input type="text" id="txtGender" placeholder="Enter your gender">
+            </div>
+            <div class="form-control">
+                <label>Age: </label>
+                <input type="text" id="txtAge" placeholder="Enter your age">
+            </div>
+            <div class="form-control">
+                <label>Phone: </label>
+                <input type="text" id="txtPhone" placeholder="Enter your phone">
+            </div>
+            <div class="form-control">
+                <label>Address: </label>
+                <input type="text" id="txtAddress" placeholder="Enter your address">
+            </div>
+            <div class="form-control">
+                <label>Payment Method: </label>
+                <input type="text" id="txtPay" placeholder="Enter your payment method">
+            </div>
+            <div class="form-control">
+                <label>Favorite Color: </label>
+                <input type="text" id="txtColor" placeholder="Enter your favorite color">
+            </div>
+            <button onclick="register();">Register</button>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/register.js"></script>
+</body>
+</html>
