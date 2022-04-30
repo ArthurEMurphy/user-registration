@@ -26,11 +26,23 @@ function isValid(user){ //email & password
     }
     if(user.password.length==0){
         valid=false;
-        console.error("Add a password");  
+        console.error("Add a password");                                      
         $("#txtPassword").addClass("input-error");
    }
    return valid;
 }
+function validatePass(){
+    // get value from the input
+    let txtPass=$("#txtPassword");
+    let password=txtPass.val();
+    if(password.length<6){
+        txtPass.css("background","#ff9898"); //jquery function to change the css 
+    }else{
+        txtPass.css("background", "#64ce66");//jquery function to change the css
+        }
+    }
+
+
 
 function register(){
     let inputfName = $("#txtFirstName").val(); //getting the value
@@ -47,11 +59,15 @@ function register(){
     let newUser = new User(inputfName,inputlName,inputEmail,inputPassword, inputGender, inputAge, inputPhone, inputAddress, inputPay, inputColor)
     if(isValid(newUser)){
     saveUser(newUser); //this function is on the storeManager.js
-}
+    $(`input`).val(""); // clear the inputs
+    }
 }
 
+
 function init(){
-    console.log("Init function");
+    console.log("Register");
+    //hook events
+    $("#txtPassword").keyup(validatePass);// it is executed everytime the key is up
 
 //display two users and display them on the console
     let user1 = new User("Ben", "Vance", "ben@gmail.com", "Test123", "male", "25", "207-645-1112", "123 Any Street", "Visa", "Red");

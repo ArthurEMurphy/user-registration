@@ -32,3 +32,38 @@ header.site-init{
 .input-error{
     border:1px solid red;
 }
+
+/*form*/
+.form-container{
+    background-color: lightgray;
+    border-radius:5px;
+    padding:1rem;
+    margin-top:1rem;
+}
+.form-control{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-bottom:1rem;
+    
+}
+.form-control:first-of-type{
+    margin-top:1rem;
+}
+.form-control label{
+    flex-basis:25%;
+    text-align: right;
+    margin-right:1rem;
+}
+.form-control input{
+    flex-basis:80%;
+    padding:5px;
+}
+.form-container button{
+    margin-left: 80%;
+    border:1px solid black;
+    background-color: black;
+    color:white;
+    padding:0.5rem;
+    border-radius: 5px;
+}
