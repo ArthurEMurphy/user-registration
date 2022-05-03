@@ -18,7 +18,7 @@ function isValid(user){ //email & password
     //return false when the user is not valid
     //return true when the user is valid
     let valid=true;
-    $("input").removeClass("input-error");
+    $("#input").removeClass("input-error");
     if(user.email.length==0){
         valid=false;
         console.error("Add your email");
@@ -39,10 +39,29 @@ function validatePass(){
         txtPass.css("background","#ff9898"); //jquery function to change the css 
     }else{
         txtPass.css("background", "#64ce66");//jquery function to change the css
-        }
+        displayError("The password is too short :( ");
     }
+}
+
+function validateEmail(){
+    let txtEmail=$("#txtEmail");
+    let email=txtEmail.val();
+    if(email.length<1){
+        txtEmail.css("background", "#64ce66");
+    }else{
+        txtEmail.css("background", "#ff9898");
+        displayError("The email is missing :( ");
+    }
+}
 
 
+function displayError(msg){
+        $("#alertError").removeClass("hide").text(msg);
+
+    }
+function hideError(){
+    $("#alertError").addClass("hide");
+}
 
 function register(){
     let inputfName = $("#txtFirstName").val(); //getting the value
@@ -59,7 +78,7 @@ function register(){
     let newUser = new User(inputfName,inputlName,inputEmail,inputPassword, inputGender, inputAge, inputPhone, inputAddress, inputPay, inputColor)
     if(isValid(newUser)){
     saveUser(newUser); //this function is on the storeManager.js
-    $(`input`).val(""); // clear the inputs
+    $(`#input`).val(""); // clear the inputs
     }
 }
 

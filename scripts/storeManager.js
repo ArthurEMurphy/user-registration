@@ -2,7 +2,7 @@ const STORE_KEY = "users";
 
 function saveUser(user){
     //load old data
-    let oldDate=readUsers(); // getting localstorage info
+    let oldData=readUsers(); // getting localstorage info
     oldData.push(user);
     // console.log(oldData);
     // console.log(user);
