@@ -1,4 +1,4 @@
-const STORE_KEY = "users";
+const STORE_KEY ="users";
 
 function saveUser(user){
     //load old data
@@ -6,7 +6,7 @@ function saveUser(user){
     oldData.push(user);
     // console.log(oldData);
     // console.log(user);
-    let val = JSON.stringify(oldData);
+    let val=JSON.stringify(oldData);
     // console.log(val);
     localStorage.setItem(STORE_KEY,val); // JSON
 }

@@ -1,8 +1,8 @@
 // this function needs an array to work
-function displayUsers(userArray){
+function displayUsers(usersArray){
     let row="";
-    for(let i=0;i<userArray.length;i++){
-    let user = userArray[i]; // get each user
+    for(let i=0;i<usersArray.length;i++){
+    let user = usersArray[i]; // get each user
     console.log(user);
 // create a row=`<>${} <>`
     
@@ -44,8 +44,10 @@ function displayUsers(userArray){
 function init(){
     console.log("Listing users");
     let users=readUsers(); // this function is on the storemanager // getting the array
-    displayUsers(users); // this is an array
     console.log(users);
+    // this is an array
+    displayUsers(users); 
 }
+
 window.onload=init;
 

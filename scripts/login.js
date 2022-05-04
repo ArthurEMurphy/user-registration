@@ -11,10 +11,10 @@ function login(){
         // not recommended
         // if(userList[i].email==inputEmail){}
         //recommended way
-        let user=user=userList[i];
+        let user=userList[i];
         if(user.email===inputEmail && user.password===inputPassword){
             flag=true;
-            window.location("users.html");
+            window.location="users.html";
         }
         if(!flag){
             $("#alertError").removeClass("hide");
